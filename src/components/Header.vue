@@ -1,6 +1,7 @@
 <template>
   <div class="nav">
     <router-link to="/">Home</router-link>
+    <router-link to="/game">Try it</router-link>
   </div>
   <router-view></router-view>
 </template>
@@ -13,23 +14,30 @@ export default {
 
 <style scoped>
 .nav {
+  font-size: 30px;
   display: flex;
-  gap: 10px;
   justify-content: center;
-  margin: 20px auto 60px auto;
+  gap: 20px;
+  margin: 40px auto 60px auto;
   padding: 30px;
-  background-color: #DFF2D8;
+  width: 40%;
+  background-color: #fefae0;
+  border-radius: 3px;
+  transform: rotate(4deg);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .nav a {
+  padding: 5px;
   text-decoration: none;
-  color: #6CAE75;
+  color: #8FC651;
   font-size: 25px;
-  transition: 1s;
+  font-weight: bold;
+  transition: 0.5s;
 }
 
 .nav a:hover {
   color: black;
-  transform: rotate(3deg);
+  transform: scale(115%);
 }
 </style>

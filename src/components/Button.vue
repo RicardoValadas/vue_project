@@ -1,5 +1,7 @@
 <template>
-    <button class="btn" :style="{ background: color }">{{ text }}</button>
+  <button class="btn" :style="{ background: color }">
+    {{ text }}
+  </button>
 </template>
 
 <script lang="ts">
@@ -20,10 +22,13 @@ export default {
 
 <style scoped>
 .btn {
+  font-weight: 600;
+  font-size: 25px;
   border: none;
   border-radius: 2px;
-  padding: 10px 20px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  padding: 15px 25px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   cursor: pointer;
   transition: 0.3s;
 }

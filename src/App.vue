@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-  <Header />
+    <Header />
   </div>
 </template>
 
@@ -8,10 +8,10 @@
 import Header from "@/components/Header.vue";
 export default {
   name: "App",
-  components:{
-    Header
-  }
-}
+  components: {
+    Header,
+  },
+};
 </script>
 
 <style>
@@ -19,7 +19,10 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Barlow', sans-serif;
   /*font-family: 'Yuji Boku', serif; special style to use later maybe in users*/
+}
+body {
+  font-family: "Barlow", sans-serif;
+  background-color: #C3E991;
 }
 </style>
