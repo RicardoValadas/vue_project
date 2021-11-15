@@ -16,6 +16,8 @@
       class="btnRegister"
     />
     <Register v-show="registerActive" />
+    <router-link to="/store"><Button text="Store" class="btn-home" @click="openStore" color="green" /></router-link>
+
     <Button
       class="btn-home"
       @click="showUsers"
@@ -38,6 +40,7 @@ import SignIn from "@/components/SignIn";
 import Register from "@/components/Register";
 
 const usersApi = "https://618e1d3550e24d0017ce107e.mockapi.io/Users";
+
 export default defineComponent({
   name: "Home",
   data() {
@@ -65,13 +68,16 @@ export default defineComponent({
     Button,
   },
   methods: {
+    openStore() {
+      this.storeActive = !this.storeActive;
+    },
     showUsers() {
       this.usersActive = !this.usersActive;
     },
     signActivate() {
       this.signActive = !this.signActive;
       if (this.registerActive == true) {
-        this.changeRegister()
+        this.changeRegister();
       }
     },
     changeRegister() {
